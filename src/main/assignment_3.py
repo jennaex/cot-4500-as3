@@ -88,28 +88,28 @@ if __name__ == '__main__':
 
     # Question 2
     # Values needed for the Runge Kutta Method
-    x0 = 0
+    t0 = 0
     y = 1
-    x = 2
     h = 0.2
+    t = 2
 
-    print("%.5f" % rungekuttamethod(x0, y, x, h), "\n")
+    print("%.5f" % rungekuttamethod(t0, y, t, h), "\n")
 
     # Question 3
     # creating the array
     a = np.array([[2.0, -1.0, 1.0], [1.0, 3.0, 1.0], [-1.0, 5.0, 4.0]])
     b = np.array([6.0, 0.0, -3.0])
-    x = gaussandbackwards(a, b)
+    d = gaussandbackwards(a, b)
 
-    print(x, "\n")
+    print(d, "\n")
 
     # Question 4a
     # creating the array
     n_array = np.array([[1.0, 1.0, 0.0, 3.0], [2.0, 1.0, -1.0, 1.0], [3.0, -1.0, -1.0, 2.0], [-1.0, 2.0, 3.0, -1.0]])
     # calculating the determinant of matrix
-    det = np.linalg.det(n_array)
+    determinant = np.linalg.det(n_array)
 
-    print("%.5f" % round(det), "\n")
+    print("%.5f" % round(determinant), "\n")
 
     # Question 4b & 4c
     L, U = lufactorization(n_array)
